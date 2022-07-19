@@ -3,6 +3,8 @@ import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
 
+import codeMockupImg from "../assets/code-mockup.png";
+
 const CREATE_SUBSCRIBER_MUTATION = gql`
   mutation CreateSubscriber($name: String!, $email: String!) {
     createSubscriber(data: {name: $name, email: $email}) {
@@ -85,7 +87,7 @@ export function Subscribe() {
 
       </div>
 
-      <img src="/src/assets/code-mockup.png" alt="code mockup" className="mt-10" />
+      <img src={codeMockupImg} alt="code mockup" className="mt-10" />
     </div>
   );
 }
